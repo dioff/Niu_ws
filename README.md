@@ -86,10 +86,12 @@ ncut@ubuntu:~$ rostopic list
 ## 五、功能包介绍
 
 文件结构：
+```bash
 ├── car_gazebo
 ├── car_map
 ├── teb_local_planner-melodic-devel
 └── teleop_twist_keyboard
+```
 
 功能包中已自带建图程序demo，可自行修改参数进行建图
 
