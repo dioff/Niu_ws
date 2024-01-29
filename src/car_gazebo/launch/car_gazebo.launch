@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="world_name" default="111" />
+  <arg name="gui" default="true"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find car_gazebo)/worlds/$(arg world_name).world"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <!-- urdf xml robot description loaded on the Parameter Server, converting the xacro into a proper urdf file-->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '/home/ncut/Niu_ws/src/car_gazebo/urdf/waking_robot.xacro'" />
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="racecar_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model waking_robot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+</launch>
