@@ -105,7 +105,26 @@ roslaunch car_map liu_gmapping.launch
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 ## 六、问题解决
-1、若出现桶锥模型不存在的情况下，需要将"src/car_gazebo/model/"文件夹下的construction_cone文件夹复制到home目录下.gazebo/model/文件下，若文件不存在需要自行新建（注: .gazebo为隐藏文件，Ctrl+H即可显示，若还是没有需要现在终端启动一遍gazebo）
+1. 若出现桶锥模型不存在的情况下，需要将"src/car_gazebo/model/"文件夹下的construction_cone文件夹复制到home目录下.gazebo/model/文件下，若文件不存在需要自行新建（注: .gazebo为隐藏文件，Ctrl+H即可显示，若还是没有需要现在终端启动一遍gazebo）
+
+2. 防止启动时编码报错，更改python2的默认编码，解决方法：
+
+   ```bash
+   sudo vim /usr/lib/python2.7/site.py  # 若没有vim可以使用gedit
+   #找到 setencoding()函数，修改encoding为utf-8
+   reboot  #重启电脑
+   ```
+
+3. 若出现Gazebo [Err] [REST.cc:205] Error in REST request现象，解决方法：
+
+   ```bash
+   sudo gedit ~/.ignition/fuel/config.yaml
+   # url改为url: https://api.ignitionrobotics.org
+   ```
+
+4. 
+
+
 ## 七、更新情况
 
 - 2024.1.30 05：19 第一次更新仓库
