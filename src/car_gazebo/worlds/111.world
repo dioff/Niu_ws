@@ -1168,8 +1168,8 @@
       <static>1</static>
     </model>
     <state world_name='default'>
-      <sim_time>872 92000000</sim_time>
-      <real_time>847 458954766</real_time>
+      <sim_time>0</sim_time>
+      <real_time>0</real_time>
       <wall_time>1706554502 730168453</wall_time>
       <iterations>768201</iterations>
       <model name='Construction Cone'>
