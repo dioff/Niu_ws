@@ -105,7 +105,7 @@ roslaunch car_map liu_gmapping.launch
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 ## 六、问题解决
-1. 若出现桶锥模型不存在的情况下，需要将"src/car_gazebo/model/"文件夹下的construction_cone文件夹复制到home目录下.gazebo/model/文件下，若文件不存在需要自行新建（注: .gazebo为隐藏文件，Ctrl+H即可显示，若还是没有需要现在终端启动一遍gazebo）
+1. 若出现桶锥模型不存在的情况下，需要将"src/car_gazebo/model/"文件夹下的construction_cone文件夹复制到home目录下.gazebo/models/文件下，若文件不存在需要自行新建（注: .gazebo为隐藏文件，Ctrl+H即可显示，若还是没有需要现在终端启动一遍gazebo）
 
 2. 防止启动时编码报错，更改python2的默认编码，解决方法：
 

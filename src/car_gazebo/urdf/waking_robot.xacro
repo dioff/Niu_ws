@@ -282,7 +282,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://gazebo_pkg/meshes/hokuyo.dae"/>
+        <mesh filename="package://car_gazebo/meshes/hokuyo.dae"/>
       </geometry>
     </visual>
 
