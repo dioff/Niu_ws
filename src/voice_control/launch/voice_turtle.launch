@@ -1,0 +1,7 @@
+<launch>
+    <!-- 开启海龟节点 -->
+    <node name="turtle" pkg="turtlesim" type="turtlesim_node" output="screen" />
+    <!-- 开启语音控制节点 -->
+    <node name="control_voice" pkg="voice_control" type="voice" output="screen"/>
+
+</launch>

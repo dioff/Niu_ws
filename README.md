@@ -129,3 +129,4 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 - 2024.1.30 05：19 第一次更新仓库
 - 2024.1.30 12：32 解决模型文件不存在问题
+- 2024.2.04 18：51 更新讯飞语音在线识别包
